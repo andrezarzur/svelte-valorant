@@ -6,7 +6,7 @@ class ValorantApi {
     async getDataFromAPI() {
       try {
           console.log('asdasd')
-        const agentData = await axios.get('https://valorant-api.com/v1/agents')
+        const agentData = await axios.get(process.env.VALORANT_API_AGENTS_URL)
         return agentData.data;
       } catch (error) {
         console.error('Error fetching data from API:', error);
